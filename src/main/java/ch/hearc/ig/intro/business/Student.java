@@ -98,7 +98,7 @@ public class Student {
         return "Etudiant numéro : " + getId() + System.lineSeparator() +
                 "Prénom : " + getFirstName() + System.lineSeparator() +
                 "Nom : " + getLastName() + System.lineSeparator() +
-                "Age :" + getAge() +System.lineSeparator() +
+                "Age : " + getAge() +System.lineSeparator() +
                 "Marié : " + isMariedInFrench() + System.lineSeparator() +
                 "Sexe : " + getSex() + System.lineSeparator();
     }

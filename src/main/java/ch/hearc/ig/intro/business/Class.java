@@ -22,10 +22,11 @@ public class Class {
     @Override
     public String toString() {
 
-        return "Code de la classe :" + code
-                + "Les étudiants :" + students.stream()
-                                              .map(Objects::toString)
-                                              .collect(Collectors.joining(System.lineSeparator()));
+        return "Code de la classe : " + code + System.lineSeparator()
+                + "Les étudiants : " + System.lineSeparator() +
+                students.stream()
+                        .map(Objects::toString)
+                        .collect(Collectors.joining(System.lineSeparator()));
     }
 
     public ArrayList<Student> getStudents() {
