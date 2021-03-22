@@ -73,6 +73,10 @@ public class Student {
         return maried;
     }
 
+    public String isMariedInFrench() {
+        return maried ? "Oui" : "Non";
+    }
+
     public void setMaried(boolean maried) {
 
         this.maried = maried;
@@ -91,14 +95,12 @@ public class Student {
     @Override
     public String toString() {
 
-        return "Student{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", maried=" + maried +
-                ", sex='" + sex + '\'' +
-                '}';
+        return "Etudiant numéro : " + getId() + System.lineSeparator() +
+                "Prénom : " + getFirstName() + System.lineSeparator() +
+                "Nom : " + getLastName() + System.lineSeparator() +
+                "Age :" + getAge() +System.lineSeparator() +
+                "Marié : " + isMariedInFrench() + System.lineSeparator() +
+                "Sexe : " + getSex() + System.lineSeparator();
     }
 
 }

@@ -2,12 +2,13 @@ package ch.hearc.ig.intro.business;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Class {
 
-    private String code;
-
     private final ArrayList<Student> students = new ArrayList<>();
+
+    private String code;
 
     public Class() {
 
@@ -16,6 +17,15 @@ public class Class {
     public Class(String code) {
 
         this.code = code;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Code de la classe :" + code
+                + "Les étudiants :" + students.stream()
+                                              .map(Objects::toString)
+                                              .collect(Collectors.joining(System.lineSeparator()));
     }
 
     public ArrayList<Student> getStudents() {

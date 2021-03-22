@@ -9,6 +9,7 @@ public class ClassConsole {
 
     public void print(Class classe) {
 
+        System.out.println(classe);
     }
 
 }
